@@ -1,6 +1,28 @@
-# Getting Started with Create React App
+<img src="./src/micro.svg">
+
+# Maths-guru
+> "Math Guru" is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to:  Make simple calculations based on the in-built functionality that provides users with great abstractions. It also offers informative fun by serving users with random Math-related quotes.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+## Built With
+- HTML
+- CSS
+- JavaScript
+- React Library/Framework
+- Github Action
+
+## Prerequisites
+> Opening this file requires npm (node.js) to be installed on your computer before can work on it.
+
+## Getting Started
+> Clone this repository
+To get a local copy up and running follow these simple example steps.
+
+- $ git clone [here](https://www.github.com/AbayomiOlaoye/Maths-guru)
+- $ cd Maths-guru
+
 
 ## Available Scripts
 
@@ -39,32 +61,29 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+👤 **Author**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- GitHub: [@AbayomiOlaoye](https://github.com/AbayomiOlaoye)
+- Twitter: [@olaoyeelijah](https://twitter.com/olaoyeelijah)
+- LinkedIn: [Oluwatoyin_Olaoye](https://linkedin.com/in/oluwatoyinolaoye)
 
-### Code Splitting
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Contributions, issues, and feature requests are welcome!
 
-### Analyzing the Bundle Size
+Feel free to check the [issues page](../../issues/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Show your support
 
-### Making a Progressive Web App
+Give a ⭐️ if you like this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Acknowledgments
 
-### Advanced Configuration
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📝 License
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](./LICENSE) licensed.
