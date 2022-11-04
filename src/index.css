@@ -1,5 +1,9 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -14,14 +18,56 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  max-height: 100vh;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+.App {
+  background: #282028;
+  height: 100vh;
+}
+
+header {
+  background-color: #848693;
+  padding: 1rem;
+}
+
+.panel {
+  padding: 5rem;
+}
+
+table {
+  width: 70%;
+  max-width: 575px;
+  margin: 5rem auto;
+  border: 1px solid #fff;
+  border-collapse: collapse;
+}
+
+.row {
+  height: 5vh;
+}
+
+tr,
+td {
+  border: 1px solid #fff;
+  border-collapse: collapse;
+  text-align: center;
+  background-color: rgb(224, 224, 224);
+}
+
+tbody td {
+  width: 30vw;
+}
+
+tr.result td {
+  text-align: right;
+  padding: 0 0.5rem;
+  background-color: #848693;
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.orange {
+  background: rgb(245, 144, 62);
 }
