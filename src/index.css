@@ -69,5 +69,12 @@ tr.result td {
 }
 
 .orange {
+  position: relative;
   background: rgb(245, 144, 62);
+}
+
+.divide {
+  position: absolute;
+  top: 16px;
+  left: 52px;
 }
