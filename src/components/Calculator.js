@@ -46,7 +46,7 @@ class Calculator extends Component {
             <tr className="row">
               <Button computeFunction={this.computeFunction} name="9" />
               <Button computeFunction={this.computeFunction} name="8" />
-              <Button computeFunction={this.computeFunction} name="7;" />
+              <Button computeFunction={this.computeFunction} name="7" />
               <Button computeFunction={this.computeFunction} name="x" className={className} />
             </tr>
             <tr className="row">
