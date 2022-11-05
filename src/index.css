@@ -20,6 +20,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   width: 100%;
   max-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 .App {
@@ -68,13 +69,29 @@ tr.result td {
   font-size: 1.25rem;
 }
 
-.orange {
-  position: relative;
+button {
+  width: 100%;
+  height: 5vh;
+  border: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: rgb(224, 224, 200);
+}
+
+button:active {
+  background-color: rgba(224, 224, 224, 0.8);
+}
+
+.orange button {
   background: rgb(245, 144, 62);
 }
 
-.divide {
-  position: absolute;
-  top: 16px;
-  left: 52px;
+.orange button:hover {
+  background: rgba(245, 144, 62, 0.7);
+}
+
+.orange button:active {
+  background: rgba(245, 144, 62, 0.4);
 }
