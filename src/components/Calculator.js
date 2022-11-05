@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
 import calculate from '../logic/calculate';
+import Button from './Button';
 
 const Calculator = () => {
   const state = {
     total: null,
     next: null,
     operation: null,
+    className: 'orange',
+    colSpan: 2,
   };
 
   const [now, toggle] = useState(state);
 
   const computeFunction = (e) => {
-    toggle((now) => calculate({
-      total: now.total,
-      next: now.next,
-      operation: now.operation,
-    }, e.target.name));
+    toggle((now) => calculate(now, e.target.name));
   };
 
   // Destructuring state
-  const { total, next, operation } = now;
+  const {
+    total, next, operation, className, colSpan,
+  } = now;
   return (
     <div className="panel">
       <table>
@@ -34,35 +35,33 @@ const Calculator = () => {
         </thead>
         <tbody>
           <tr className="row">
-            <td><button type="button" onClick={computeFunction} name="AC">AC</button></td>
-            <td><button type="button" onClick={computeFunction} name="+/-">+/-</button></td>
-            <td><button type="button" onClick={computeFunction} name="&#37;">%</button></td>
-            <td className="orange">
-              <button type="button" onClick={computeFunction} name="&#247;">&#247;</button>
-            </td>
+            <Button computeFunction={computeFunction} name="AC" />
+            <Button computeFunction={computeFunction} name="+/-" />
+            <Button computeFunction={computeFunction} name="&#37;" />
+            <Button computeFunction={computeFunction} name="&#247;" className={className} />
           </tr>
           <tr className="row">
-            <td><button type="button" onClick={computeFunction} name="7">7</button></td>
-            <td><button type="button" onClick={computeFunction} name="8">8</button></td>
-            <td><button type="button" onClick={computeFunction} name="9">9</button></td>
-            <td className="orange"><button type="button" onClick={computeFunction} name="x">x</button></td>
+            <Button computeFunction={computeFunction} name="9" />
+            <Button computeFunction={computeFunction} name="8" />
+            <Button computeFunction={computeFunction} name="7" />
+            <Button computeFunction={computeFunction} name="x" className={className} />
           </tr>
           <tr className="row">
-            <td><button type="button" onClick={computeFunction} name="6">6</button></td>
-            <td><button type="button" onClick={computeFunction} name="5">5</button></td>
-            <td><button type="button" onClick={computeFunction} name="4">4</button></td>
-            <td className="orange"><button type="button" onClick={computeFunction} name="-">-</button></td>
+            <Button computeFunction={computeFunction} name="6" />
+            <Button computeFunction={computeFunction} name="5" />
+            <Button computeFunction={computeFunction} name="4" />
+            <Button computeFunction={computeFunction} name="-" className={className} />
           </tr>
           <tr className="row">
-            <td><button type="button" onClick={computeFunction} name="3">3</button></td>
-            <td><button type="button" onClick={computeFunction} name="2">2</button></td>
-            <td><button type="button" onClick={computeFunction} name="1">1</button></td>
-            <td className="orange"><button type="button" onClick={computeFunction} name="+">+</button></td>
+            <Button computeFunction={computeFunction} name="3" />
+            <Button computeFunction={computeFunction} name="2" />
+            <Button computeFunction={computeFunction} name="1" />
+            <Button computeFunction={computeFunction} name="+" className={className} />
           </tr>
           <tr className="row">
-            <td colSpan={2}><button type="button" onClick={computeFunction} name="0">0</button></td>
-            <td><button type="button" onClick={computeFunction} name=".">.</button></td>
-            <td className="orange"><button type="button" onClick={computeFunction} name="&#61;">=</button></td>
+            <Button computeFunction={computeFunction} name="0" colSpan={colSpan} />
+            <Button computeFunction={computeFunction} name="." />
+            <Button computeFunction={computeFunction} name="&#61;" className={className} />
           </tr>
         </tbody>
       </table>
