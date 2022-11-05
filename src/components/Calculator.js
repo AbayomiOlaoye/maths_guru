@@ -1,52 +1,70 @@
 import React, { Component } from 'react';
+import calculate from '../logic/calculate';
+import Button from './Button';
 
 class Calculator extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      total: null,
+      next: null,
+      operation: null,
+      className: 'orange',
+      colSpan: 2,
+    };
+    this.computeFunction = this.computeFunction.bind(this);
+  }
+
+  computeFunction = (e) => {
+    this.setState((now) => calculate(now, e.target.name));
   }
 
   render() {
+    // Destructuring this.state
+    const {
+      total, next, operation, className, colSpan,
+    } = this.state;
     return (
       <div className="panel">
         <table>
           <thead>
             <tr className="result row">
-              <td colSpan={4}>0</td>
+              <td colSpan={4}>
+                {total}
+                {operation}
+                {next}
+              </td>
             </tr>
           </thead>
           <tbody>
             <tr className="row">
-              <td>AC</td>
-              <td>+/-</td>
-              <td>%</td>
-              <td className="orange">
-                <span className="semiC">:</span>
-                <span className="divide">-</span>
-              </td>
+              <Button computeFunction={this.computeFunction} name="AC" />
+              <Button computeFunction={this.computeFunction} name="+/-" />
+              <Button computeFunction={this.computeFunction} name="&#37;" />
+              <Button computeFunction={this.computeFunction} name="&#247;" className={className} />
             </tr>
             <tr className="row">
-              <td>7</td>
-              <td>8</td>
-              <td>9</td>
-              <td className="orange">x</td>
+              <Button computeFunction={this.computeFunction} name="9" />
+              <Button computeFunction={this.computeFunction} name="8" />
+              <Button computeFunction={this.computeFunction} name="7" />
+              <Button computeFunction={this.computeFunction} name="x" className={className} />
             </tr>
             <tr className="row">
-              <td>6</td>
-              <td>5</td>
-              <td>4</td>
-              <td className="orange">-</td>
+              <Button computeFunction={this.computeFunction} name="6" />
+              <Button computeFunction={this.computeFunction} name="5" />
+              <Button computeFunction={this.computeFunction} name="4" />
+              <Button computeFunction={this.computeFunction} name="-" className={className} />
             </tr>
             <tr className="row">
-              <td>3</td>
-              <td>2</td>
-              <td>1</td>
-              <td className="orange">+</td>
+              <Button computeFunction={this.computeFunction} name="3" />
+              <Button computeFunction={this.computeFunction} name="2" />
+              <Button computeFunction={this.computeFunction} name="1" />
+              <Button computeFunction={this.computeFunction} name="+" className={className} />
             </tr>
             <tr className="row">
-              <td colSpan={2}>0</td>
-              <td>.</td>
-              <td className="orange">=</td>
+              <Button computeFunction={this.computeFunction} name="0" colSpan={colSpan} />
+              <Button computeFunction={this.computeFunction} name="." />
+              <Button computeFunction={this.computeFunction} name="&#61;" className={className} />
             </tr>
           </tbody>
         </table>
