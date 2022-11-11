@@ -23,14 +23,51 @@ body {
   scroll-behavior: smooth;
 }
 
-.App {
-  background: #282028;
-  height: 100vh;
+.paraText {
+  color: #848693;
+  max-width: 500px;
+  margin: 2rem auto;
+  font-size: 2rem;
+  line-height: 40px;
+  text-align: center;
 }
 
-header {
-  background-color: #848693;
-  padding: 1rem;
+.heroPage {
+  margin-top: 10rem;
+}
+
+.quota {
+  color: cyan;
+  text-align: center;
+  margin-top: 8rem;
+}
+
+.container {
+  max-width: 100%;
+  height: 100vh;
+  padding: 7rem;
+  margin: 0 auto;
+  background-color: black;
+}
+
+.flex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navList,
+a {
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: #f2f2f2;
+  transition: all 1s ease-out;
+}
+
+a:hover {
+  border-bottom: 1px solid #f2f2f2;
+  color: cyan;
 }
 
 .panel {
