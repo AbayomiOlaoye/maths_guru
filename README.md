@@ -13,6 +13,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - React Library/Framework
 - Github Action
 
+
+### Live Demo
+Click [here](https://bookystore.netlify.app) to view the deployed version
+
 ## Prerequisites
 > Opening this file requires npm (node.js) to be installed on your computer before can work on it.
 
