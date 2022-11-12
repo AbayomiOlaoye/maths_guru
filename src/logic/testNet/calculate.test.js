@@ -57,4 +57,13 @@ describe('Test if user pressed an operation button and there is an existing oper
     const obj = { ...object, total: '0', operation: '-' };
     expect(calculate(obj, 'x')).toEqual({ ...obj, total: '0', operation: 'x' });
   });
+
+  test('test if obj.total is false', () => {
+    const obj = { ...object, total: '0', operation: '+' };
+    expect(calculate(obj, '+')).toEqual({ ...obj });
+  });
+  test("The user hasn't typed a number yet, just save the operation", () => {
+    const obj = { ...object };
+    expect(calculate(obj, '+')).toEqual({ operation: '+' });
+  });
 });
